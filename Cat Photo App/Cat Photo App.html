@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<!-- this helps the code do what it's supossed to do and not go wrong, it's a safety net -->
+<html lang="en">
+<!-- this helps establish the code language and written language of the content of the webpage -->
+    <head>
+    <!-- this determines the beginning of the website -->   
+        <meta charset="utf-8">
+        <!-- this especifies the character encoding the html, it helps so every browser and system can understand accents in every language when displaying the text -->
+        <title>CatPhotoApp</title>
+        <!-- this is the title of the web -->
+    </head>
+
+    <body>
+    <!-- this defines the main content of an HTML doc and webpage -->
+        <main>
+        <!-- this is actually the written content of the webpage -->
+            <h1>CatPhotoApp</h1>
+            
+            <section>
+            <!-- this hels separate the content into parts -->
+                <h2>Cat Photos</h2>
+                <!-- there are up until 6 headings -->   
+
+                <p>See more <a href="https://freecatphotoapp.com" target=_blank>cat photos</a> in our gallery.</p>
+                <!-- inside any text you can add a reference link to go to another page -->
+                <!-- "target" specifies where to open the linked doc: "_blank" opens in a new tab or window,
+                "_self" opens in the same tab or window -->
+
+                <a href='https://freecatphotoapp.com' target="_blank">link to cat pictures</a>
+                <!-- "a" is an anchor element that you can link to another page and won't show on the preview -->
+                <!-- "href" is the most important element of the anchor because it has the route to the URL -->
+                <!-- in between the tags should be the text that will appear and link to the URL -->
+
+                <a href="https://freecatphotoapp.com" target="_self"><img 
+                src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg"
+                alt="A cute orange cat lying on its back"></a>
+                <!-- "img" is a self-closing tag, so it doesn't need a closing tag -->
+                <!-- "src" is an attribute in an "img" element that specifies the image's URL (the location) -->
+                <!-- "alt" is an attribute in an "img" that shows up when the image doesn't load -->
+                <!-- an image can also have an "a" attribute, it will begin before the image and close after the image -->
+            </section>
+            
+            <section>
+                <h2>Cat Lists</h2>
+                <h3>Things cats love:</h3>
+                <ul>
+                <!-- "ul" is an unordered list, meaning that it will be shown in points instead of numbers -->
+                <li>cat nip</li>
+                <!-- "li" is the command to actually start listing the elements -->
+                <li>laser pointers</li>
+                <li>lasagna</li>
+                </ul>
+                <figure>
+                <!-- the "figure" element is self-contained content and will allow the image to be associated with a caption -->
+                    <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg" 
+                    alt="A slice of lasagna on a plate.">
+                    <figcaption>Cats <em>love</em> lasagna.</figcaption>
+                    <!-- "figcaption" is the one that adds the caption to the image -->
+                    <!-- "em" helps emphasize a part of a text with an italic font -->
+                </figure>
+                <h3>Top 3 things cats hate:</h3>
+                <ol>
+                <!-- "ol" is an ordered list that shows the elements in numbers -->
+                    <li>flea treatment</li>
+                    <li>thunder</li>
+                    <li>other cats</li>
+                </ol>
+                <figure>
+                    <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg" 
+                    alt="Five cats looking around a field.">
+                    <figcaption>Cats <strong>hate</strong> other cats.</figcaption>
+                    <!-- "strong" is an element that makes a part of the text bold to emphasize it -->
+                </figure>
+            </section>
+            
+            <section>
+                <h2>Cat Form</h2>
+
+                <form action="https://freecatphotoapp.com/submit-cat-photo">
+                <!-- "form" is an element that creates an interactive form in the webpage -->
+                <!-- "action" is an attribute that helps the form know where should it be sent to -->
+                
+                <fieldset>
+                <!-- "fieldset" is an element used to group elements in a visual way so you can indicate they are related or belong to a common category -->
+                    <legend>Is your cat an indoor or outdoor cat?</legend>
+                    <!-- "legend" is an element that acts as a caption for the content in the "fieldset" element, giving the user context of what to do -->
+                    <label><input id= "indoor" type="radio" name= "indoor-outdoor" value= "indoor" checked> Indoor</label>
+                    <label><input id="outdoor" type="radio" name= "indoor-outdoor" value= "outdoor"> Outdoor</label>
+                    <!-- "label" elements are used to connect the text of an "input" (or "select", "textarea", "button") element with the "input" element itself, meaning that you can click the text and it activates the input -->
+                    <!-- "radio" is the type of attribute that will be used and is a multiple choice button in a circle -->
+                    <!-- "id" is an attribute that helps identify the object to style later with javascript or css and it should be unique, like a variable -->
+                    <!-- "Indoor" is the text that will appear just after the button -->
+                    <!-- but, if you write anything just befor "<input", it will be shown before the button -->
+                    <!-- since both buttons could be selected at the same time, you should use the attribute "name" so if you select one, the other automatically deselects (it should be place with the same name in both buttons) -->
+                    <!-- because of how many buttons you have, it's better to add a "value" attribute so the form actually knows what's selected -->
+                </fieldset>
+
+                <fieldset>
+                    <legend>What's your cat's personality?</legend>
+                    <input id="loving" type="checkbox" name="personality" value="loving" checked> <label for="loving">Loving</label>
+                    <input id="lazy" type="checkbox" name="personality" value="lazy"> <label for="lazy">Lazy</label>
+                    <input id="energetic" type="checkbox" name="personality" value="energetic"> <label for="energetic">Energetic</label>
+                    <!-- in this case, the "label" element is outside the input. to associate it with the input you can use "for" attribute naming the id of the element to reference it -->
+                    <!-- for checkboxes, the "name" does not deselect the other option, but helps the code make an arrange with all selected options -->
+                    <!-- adding the attribute "checked" checks the option by default -->
+                </fieldset>
+                
+                    <input type="text" name="catphotourl" placeholder="cat photo URL" required>
+                    <!-- "input" is a self-closing element that lets the user input a password, text, submit the form, etc. -->
+                    <!-- "type" is an attribute that determines what kind of input will the user interact with -->
+                    <!-- "text" is the type of attribute that lets the user input text in a box -->
+                    <!-- "name" is a way to establish a 'variable' to the text inside the input -->
+                    <!-- "placeholder" is an attribute that inserts a text into the box so the user knows what to put in it -->
+                    <!-- "required" is written so the user doesn't submit the form withou important info -->
+                    <button type="submit">Submit</button>
+                    <!-- "button" creates a clickable button with a text -->
+                    <!-- "type" is an attribute that helps the button know what it should do -->
+                    <!-- "submit" lets the button know its action -->
+                    <!-- since "input" and "button" are inline elements, they'll appear in the same line -->
+                    <!-- writing "Submit" in between tags will make the button know what it should say inside of it -->
+                </form>
+
+            </section>
+
+        </main>
+
+        <footer>
+        <!-- this determines the end of the website -->
+            <p>No Copyright - <a href="https://www.freecodecamp.org">freeCodeCamp.org</a></p>
+        </footer>
+
+    </body>
+
+</html>

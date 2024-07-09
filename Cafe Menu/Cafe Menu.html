@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <!-- right now, this code only works well for computers, but to make it work on mobile devices, you need to add a line code -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- "viewport" is to let meta know we are defining the viewport settings -->
+        <!-- "content" defines the properties, where "device-width" means that it will acomodate to the device, and "initial-scale" is on 1.0 so it displays on its original size without zooming in or out -->
+        <title>Cafe Menu</title>
+        <!-- it's better to link a separate css file to the html to have everything more organized -->
+        <link rel="stylesheet" type="text/css" href="Style.css">
+        <!-- always link the css file after the title because the title is connected to the head section in a way that helps establish the webpage title -->
+        <!-- "rel" attribute is to determine the relationship to the file connected, in this case is a stylesheet -->
+        <!-- "type" is to determine the type of linked resource -->
+        <!-- "href" is the path of the file, but if it is in the same directory you can use just the name -->
+    </head>
+    <body>
+        <div class="menu">
+        <!-- "div" element is used for design layout purposes, when you give a value to the id, it can be used to edit that section in css -->
+        <!-- it is more common though to use "class" instead of "id" -->
+        <!-- the difference between "id" and "class" is that "id" is for one use only, while "class" is when you are going to use the same style to a lot of elements, so you call them the same -->
+        
+            <main>
+                <h1>CAMPER CAFE</h1>
+                <p class="established">Est. 2020</p>
+                <hr>
+                <!-- "hr" is a divider and it is a self closing tag-->
+                <section>
+                    <h2>Coffee</h2>
+                    <img src="https://cdn.freecodecamp.org/curriculum/css-cafe/coffee.jpg" alt="coffee icon">
+                    <article class="item">
+                    <!-- "article" is used to separate in kind of sections each element, like each post has its own "article", or each comment, etc. This helps with the SEO and accessibility since search engines can understand better and index the content -->
+                        <p class="flavor">French Vanilla</p><p class="price">3.00</p>
+                        <!-- this is pure preference for styling -->
+                    </article>
+                    <article class="item">
+                        <p class="flavor">Caramel Macchiato</p><p class="price">3.75</p>
+                    </article>
+                    <article class="item">
+                        <p class="flavor">Pumpkin Spice</p><p class="price">3.50</p>
+                    </article>
+                    <article class="item">
+                        <p class="flavor">Hazelnut</p><p class="price">4.00</p>
+                    </article>
+                    <article class="item">
+                        <p class="flavor">Mocha</p><p class="price">4.50</p>
+                    </article>
+                </section>
+                <section>
+                    <h2>Desserts</h2>
+                    <img src="https://cdn.freecodecamp.org/curriculum/css-cafe/pie.jpg" alt="pie icon"/>
+                    <article class="item">
+                        <p class="dessert">Donut</p><p class="price">1.50</p>
+                    </article>
+                    <article class="item">
+                        <p class="dessert">Cherry Pie</p><p class="price">2.75</p>
+                    </article>
+                    <article class="item">
+                        <p class="dessert">Cheesecake</p><p class="price">3.00</p>
+                    </article>
+                    <article class="item">
+                        <p class="dessert">Cinnamon Roll</p><p class="price">2.50</p>
+                    </article>
+                </section>
+            </main>
+            <hr class="bottom-line">
+            <footer>
+                <p><a href="https://www.freecodecamp.org" target="_blank">Visit our website</a></p>
+                <p class="address">123 Free Code Camp Drive</p>
+            </footer>
+        </div>
+    </body>
+</html>
