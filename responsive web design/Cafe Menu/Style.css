@@ -1,0 +1,126 @@
+/* the style element is better to put it in the head element, so it is set before rendering the rest of the code
+
+the style element works like the following:
+
+element {
+    property: value;
+}
+
+when you are going to use the same style for different elements, it's better to use the next format:
+
+selector1(element), selector2, selector3 {
+    property: value;
+} 
+*/
+
+body {
+    background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
+    font-family: sans-serif;
+    padding: 20px;
+}
+/* for the use of color in the background it is "background-color", for the use of an image in the background it is "background-image" */
+/* when linking an url, you put the link in between "()" */
+/* if you don't define a font family, the browser will just show its defined default font */
+
+.established {
+    font-style: italic;
+}
+
+hr {
+    height: 2px;
+    background-color: brown;
+    border-color: brown;
+}
+/* the default border-width is always 1px */
+
+h1, h2, p {
+    text-align: center;
+}
+
+h1 {
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+/* for default there is some margin with h1, in this case we don't want it so we put it in 0 */
+
+h2 {
+    font-size: 30px;
+}
+
+h1, h2 {
+    font-family: Impact, serif;
+}
+/* putting a second font (fallback value) after a coma means that, in case the first font is not available in that device, it will show the second option */
+
+/* we don't want the "div" to take the whole width when making changes, so you call the "value" with a "#" (it calls the id) and adjust the settings */
+/* it's more common to use a "class" attribute instead of an id */
+/* for the "class" attribute you call the value with a "." */
+.menu {
+    width: 80%;
+    max-width: 500px;
+    background-color: burlywood;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
+/* the width can be exactly x pixels (px), or a percentage of the device's screen (which is highly recommended) */
+/* putting the margins from the left and right in auto makes the element go exactly in the middle because it's set so both are automatically the same size */
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -25px;
+}
+
+.item p {
+    display: inline-block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+/* the "p" calls the style to all the paragraph elements inside the "item" */
+
+/* use "width" in both elements because that way they are not next to eachother */
+
+.flavor, .dessert {
+    text-align: left;
+    width: 75%;
+}
+
+.price {
+    text-align: right;
+    width: 25%;
+}
+
+.bottom-line {
+    margin-top: 25px;
+}
+
+footer {
+    font-size: 14px;
+}
+
+.address {
+    margin-bottom: 5px;
+}
+
+a {
+    color: black
+}
+
+a:visited {
+    color: grey;
+}
+/* ":visited" means that when that link is clicked, how is it going to change its appearance */
+
+a:hover {
+    color: brown;
+}
+/* ":hover" means that when that link is hovered with the mouse, how is it going to look */
+
+a:active {
+    color: white;
+}
+/* ":active" means that while it is being clicked, how will it look */
