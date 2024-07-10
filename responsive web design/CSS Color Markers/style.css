@@ -1,0 +1,87 @@
+h1 {
+    text-align: center;
+}
+
+.container {
+    background-color: rgb(255, 255, 255);
+    padding: 10px 0;
+}
+/* this will tell that div that the colors used will be from the rgb pallette (electronic devices, not printing) */
+/* in this case, the color 000 is black */
+/* numbers go from 0 to 255 */
+/* the three colors set to the max is white */
+
+.marker {
+    height: 25px;
+    width: 200px;
+    margin: 10px auto;
+    /* margin can have two values, 1st one will be top and bottom and 2nd will be left and right */
+}
+
+.cap {
+    width: 60px;
+    height: 25px;
+}
+
+.sleeve {
+    width: 110px;
+    height: 25px;
+    background-color: rgba(255, 255, 255, 50%);
+    border-left: 10px double rgba(0, 0, 0, 75%);
+}
+/* "opacity" is a property that goes from 0-100% or 0-1.0 being 100%/1.0 completely opaque */
+/* you can also use the alpha channel that is added to the rgb, making it rgba (0-1.0 or 0-100% or hex or hsl) */
+/* you can set the whole border or just parts of it to a different width, style and color (by default all is set to none) */
+/* default color of the border is black */
+
+.cap, .sleeve {
+    display: inline-block;
+}
+/* this is so they are next to each other instead of one blocking the other by default */
+
+.red {
+    background: linear-gradient(rgb(122, 74, 14), rgb(245, 62, 113), rgb(162, 27, 27));
+    box-shadow: 0 0 20px 0 rgba(83, 14, 14, 0.8);
+}
+/* rgb(255, 0, 0) */
+/* red and green to the max is yellow */
+/* red to the max and green halfway (127) is orange */
+/* green to the max and red halfway is chartreuese green */
+/* to use a gradient in the color of an element you have to use "background" as a property because it will let you have an image as a value */
+/* "linear-gradient(gradientDirection, color1, color2, ...)" creates an image to function */
+/* by defaul, the gradientDirection will be set to 180deg */
+/* you can use % to let the color know how much space use */
+
+/* box-shadow: offsetX offsetY blurRadius spreadRadius color; */
+/* offset values go in px or any CSS unit */
+/* +X goes to the right, -X goes to the left */
+/* +Y goes down, -Y goes up */
+/* you can write just 0 if you need to, no need to add a unit */
+/* blurRadius is set to 0 by default without writing the value, but you can change it to a higher unit to blur the shadow as much as you want */
+/* height and width of the shadow are automatic, but you can change it with "spreadRadius" using any CSS unit */
+
+.green {
+    background: linear-gradient(#55680D, #71F53E, #116C31);
+    box-shadow: 0 0 20px 0 #3B7E20CC;
+}
+/* #00FF00 */
+/* green and blue to the max is cyan */
+/* green to the max and blue halfway is spring green */
+/* blue to the max and green halfway is azure */
+/* # is HEX Codes, where first two numbers are red, next two numbers are green and final three numbers are blue */
+/* the scale from 0-100% is from 1-9 and then a-f */
+/* adding two more values to the HEX Code is the alpha channel */
+
+.blue {
+    background: linear-gradient(hsl(186, 76%, 16%), hsl(223, 90%, 60%), hsl(240, 56%, 42%));
+    box-shadow: 0 0 20px 0 hsla(223, 59%, 31%, 0.8);
+}
+/* hsl(240, 100%, 50%) */
+/* red and blue to the max is magenta */
+/* blue to the max and red halfway is violet */
+/* red to the max and blue halfway is rose/bright pink */
+/* hsl (hue, saturation and lightness) goes to max 360, 100%, 100% */
+/* red in hue is 0, green is 120 and blue is 240 */
+/* saturation goes from grey to pure color */
+/* lightness goes from black to white, where 50% would be neutral */
+/* adding "a" to hsl to make hsla is the alpha channel */
